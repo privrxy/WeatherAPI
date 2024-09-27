@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Added Roboto font for header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background: linear-gradient(to right, #E3F2FD, #5372F0);
+  background-image: url('back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+h1 {
+  backdrop-filter: blur(5px);
+  font-size: 2.5rem; 
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px;
+}
+.container {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+}
+.weather-input {
+  width: 550px;
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.weather-input select {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1.07rem;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.weather-input select:focus {
+  padding: 0 16px;
+  border: 2px solid #fcad8c;
+}
+.weather-input button {
+  width: 100%;
+  padding: 12px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.weather-input button:hover {
+  background: #88714f;
+  transform: translateY(-2px);
+}
+.weather-input button:active {
+  background: #a5afdb;
+  transform: translateY(0);
+}
+.weather-data {
+  width: 100%;
+  backdrop-filter: blur(15px);
+  border-radius: 8px; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px); 
+}
+.weather-data .current-weather {
+  color: #fffbfb; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+}
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #000000; 
+  margin-bottom: 10px; 
+}
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff; 
+}
+#close-button {
+  background: #fdfdfd;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.3s ease;
+  align-self: flex-end; 
+}
+#close-button:hover {
+  background: #88714f;
+  transform: translateY(-2px);
+}
+#close-button:active {
+  background: #88714f;
+  transform: translateY(0);
+}
+
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 2rem; 
+    padding: 16px 0;
+  }
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .weather-input {
+    width: 100%;
+  }
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+}

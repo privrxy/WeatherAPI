@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="weather.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="weather.js" defer></script>
+  </head>
+  <body>
+    <h1>Weather Update in Region 8</h1>
+    <div class="container">
+        <div class="weather-input">
+          <h3>Select a Province and City</h3>
+          <select id="province" class="province-select">
+            <option value="">Select Province</option>
+            <option value="Leyte">Leyte</option>
+            <option value="Southern Leyte">Southern Leyte</option>
+            <option value="Biliran">Biliran</option>
+            <option value="Eastern Samar">Eastern Samar</option>
+            <option value="Northern Samar">Northern Samar</option>
+            <option value="Samar">Samar</option>
+          </select>
+          <select id="city" class="city-select" disabled>
+            <option value="">Select City/Barangay</option>
+          </select>
+          <button class="get-weather-btn" onclick="getWeather()">Get Weather</button>
+        </div>
+      <div class="weather-data">
+        <div class="current-weather">
+          <div class="details">
+            <h2>_______ ( ______ )</h2>
+            <h6>Temperature: __°C</h6>
+            <h6>Wind: __ M/S</h6>
+            <h6>Humidity: __%</h6>
+            <h6>Weather Condition: __</h6>
+          </div>
+          <button id="close-button" style="display: none;">Close</button>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
